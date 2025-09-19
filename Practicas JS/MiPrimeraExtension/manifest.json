@@ -1,0 +1,17 @@
+{
+    "manifest_version": 3,
+    "name": "FirstMemoExtension",
+    "version": "0.0.2",
+    "description": "Mi primera extension",
+    "action": {
+        "default_title": "Haz click aqui!!",
+        "default_popup": "popup.html"
+    },
+    "content_scripts": [
+        {
+            "matches":["https://*.google.com/*"],
+            "css":["script.css"],
+            "js":["script.js"]
+        }
+    ]
+  }
