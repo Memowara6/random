@@ -1,0 +1,18 @@
+.container{
+    margin: 0 auto;
+    width: 75%;
+    min-width: 320px;
+    max-width: 750px; 
+}
+
+/*Aqui es donde se da la magia. El padding-bottom es la proporcion 16 a 9 y es de ahi donde sale 56.25%*/
+.video{
+    height: 0;
+    padding-bottom: 56.25%;
+    position: relative;
+}
+
+.video iframe{
+    width: 100%;
+    position: absolute;
+}
