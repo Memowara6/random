@@ -1,0 +1,28 @@
+<meta charset="UTF-8">
+
+<script>
+    //funcion para realizar saltos de linea
+    function saltarLinea() {
+        document.write("<br>");
+    }
+    
+    //funcion para mostrar un mensaje en pantalla
+    function imprimir(frase) {
+        document.write(frase);
+        saltarLinea();
+    }
+    
+    //convierte los datos en entero
+    var edad = parseInt(prompt("¿Cuál es tu edad?"));
+
+    var tieneLicencia = prompt("¿Tienes licencia? Responde S o N");
+
+    //condicional para verificar si puede conducir
+    if (edad >= 18) && (tieneLicencia == "S") {
+        imprimir("Puedes conducir")
+    }
+    else {
+        imprimir("No puedes conducir")
+    }
+
+</script>

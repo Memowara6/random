@@ -1,0 +1,40 @@
+<meta charset="UTF-8">
+
+<script>
+    
+    //usuario y contraseña requeridas para entrar al sistema
+    var inicioDeSesionRegistrado = "alura";
+    var contrasenhaRegistrada = "alura321";
+    
+    //variables contadoras
+    var contador = 1;
+    var intentos = 3;
+   
+   //loop para limitar la cantidad de intentos del usuario para poder ingresar
+   while (contador <= intentos) { 
+         var inicioDeSesionIngresado = prompt("Ingrese su usuario");
+         var contrasenhaIngresada = prompt("Ingrese su contraseña");
+       
+        //condicionales que compararan las respuestas
+        if( inicioDeSesionRegistrado == inicioDeSesionIngresado && contrasenhaRegistrada == contrasenhaIngresada ) {
+            alert("Bienvenido al sistema " + inicioDeSesionIngresado);
+            break;
+    }   else {
+            alert("inicio de sesión inválido. Favor intente de nuevo");
+        }
+        contador++;
+    }
+    
+    //esto servira para comprobar si el programa funciona
+    if (inicioDeSesionRegistrado == inicioDeSesionIngresado && contrasenhaRegistrada == contrasenhaIngresada ) {
+            document.write("Has entrado con exito a tu cuenta");
+    }
+    else {
+        document.write("No has entrado");
+    }
+
+    
+
+</script>
+
+

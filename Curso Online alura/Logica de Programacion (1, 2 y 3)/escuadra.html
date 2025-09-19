@@ -1,0 +1,31 @@
+<canvas width="600" height="400"> </canvas>
+
+
+<script>
+	//Se obtiene los valores del lienzo y la dimension de nuestra canva
+	var pantalla = document.querySelector("canvas");
+	var pincel = pantalla.getContext("2d");
+    
+    //pequeño mensaje
+    document.write("<h1>PLANTILLA DE UNA ESCUADRA</h1>");
+	
+	//triangulo grande
+	pincel.fillStyle = "black"; //color
+	pincel.beginPath(); //declara que se va a generar una nueva ruta
+	pincel.moveTo(50,50); //ubicacion del pincel
+	pincel.lineTo(50,400); //trazo de una linea
+	pincel.lineTo(400,400);//***
+	pincel.fill(); //se rellenara el espacio con el color ya antes mencionado
+
+    
+    //el mismo proceso que el bloque de codigo de arriba
+	pincel.fillStyle = "white";
+	pincel.beginPath();
+	pincel.moveTo(100,175);
+	pincel.lineTo(100,350);
+	pincel.lineTo(275,350);
+	pincel.fill();
+	
+
+
+</script>

@@ -1,0 +1,40 @@
+<canvas width="600" height="400"> </canvas>
+
+
+<script>
+
+	//declaracion del lienzo y la dimencion del pincel
+	var pantalla = document.querySelector("canvas");
+	var pincel = pantalla.getContext("2d");
+    
+    //pequeño texto
+    document.write("<h1>BANDERA DE ITALIA</h1>");
+
+    
+	pincel.fillStyle = "lightgrey"; // Propiedad
+	pincel.fillRect(0,0,600,400); // Función
+
+	pincel.fillStyle = "green"; // Propiedad
+	pincel.fillRect(0,0,200,400); // Función
+
+	pincel.fillStyle = "red"; // Propiedad
+	pincel.fillRect(400,0,200,400); // Función
+
+	pincel.fillStyle = "yellow"; // Propiedad
+	pincel.beginPath();
+	pincel.arc(300,200, 50, 0, 2 * 3.14); //esta funcion se utiliza para usar circunferencias. Estructura : posicionX - posicionY - radio (tamaño) - angulo inicial - angulo final (2 * 3.14)
+	pincel.fill();
+
+	pincel.fillStyle = "blue"; // Propiedad
+	pincel.beginPath(); //crea una nueva ruta
+	pincel.moveTo(300,200); //mueve el pincel a esas coordenadas
+	pincel.lineTo(200,400); //traza una linea del puntoA al puntoB
+	pincel.lineTo(400,400); // ***********************************
+	pincel.fill(); //rellena el espacio generado
+
+	
+
+
+
+
+</script>

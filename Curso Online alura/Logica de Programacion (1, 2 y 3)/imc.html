@@ -1,0 +1,60 @@
+<meta charset="UTF-8">
+
+<h1>PROGRAMA CALCULALR IMC</h1>
+
+
+<script>
+
+    // Esta función permite hacer saltos de linea.
+    function saltarlinea(){
+
+        document.write("<br><br><br>");
+    }
+    
+    // Esta función permite mostrar el input del usuario con una palabra.
+    function imprimir(frase){
+
+        document.write(frase)
+    }
+    
+    //funcion para calcular el imc
+    function calcularImc(peso, altura, nombre) {
+
+        return (peso / (altura * altura));
+        
+    }
+
+    /*imprimir("El promedio del imc calculado de Christian y Felipe es: " + (calcularImc(71, 1.72) + calcularImc(75, 1.73)) / 2);
+
+    imprimir("El promedio del imc calculado de Gabriela y Luisa es: " + (calcularImc(65, 1.68) + calcularImc(55, 1.68)) / 2); */
+    
+    //se le pediran los datos al usuario
+    var nombre = prompt("¿Cual es su nombre?");
+    var pesoUsuario = prompt(nombre + ", ingrese su peso");
+    var alturaUsuario = prompt(nombre + ", ingrese su altura");
+    
+    //formula para calcular el imc 
+    var imc = parseInt(calcularImc(pesoUsuario, alturaUsuario));
+    
+    //se mostrara el imc calculado del usuario
+    imprimir(nombre + ", su imc calculado es: " + imc);
+    saltarlinea(); 
+    
+    //El programa determinara en que rango estara el imc del usuario.
+    if (imc < 18.5) {
+        imprimir(nombre + ". Esta abajo de lo recomendado");
+    }
+
+    else if (imc >= 18.5 && imc < 25 ) {
+        imprimir(nombre + ". Esta en el intervalo normal");
+    }
+
+    else if (imc >= 25 && imc < 30) {
+        imprimir(nombre + ". Esta con sobrepeso");
+    }
+
+    else if (imc >= 30) {
+        imprimir(nombre + ". Esta con obesidad");
+    }
+
+</script>

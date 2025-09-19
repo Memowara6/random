@@ -1,0 +1,37 @@
+<meta charset="UTF-8">
+
+<h1>PROGRAMA DE ADIVINANZA</h1>
+
+
+<script>
+
+    // Esta función permite hacer saltos de linea.
+    function saltarlinea(){
+
+        document.write("<br><br><br>");
+    }
+    
+    // Esta función permite mostrar el input del usuario con una palabra.
+    function print(frase){
+
+        document.write(frase)
+    }
+    
+    //Loop para generar la cantidad de lineas de estrellas
+    for (var lineas = 1; lineas <= 3; lineas++) {
+        
+        //loop para generar la cantidad de estrellas de una fila
+        for (var fila = 1; fila <= 10; fila++) {
+
+            document.write("*");
+        }
+
+        saltarlinea();
+    }
+
+    saltarlinea();
+    saltarlinea();
+
+    print("FIN");
+
+</script>

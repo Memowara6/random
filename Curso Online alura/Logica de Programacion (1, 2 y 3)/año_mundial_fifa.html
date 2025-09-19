@@ -1,0 +1,35 @@
+<meta charset="UTF-8">
+
+<h1>PROGRAMA - AÑO MUNDIAL DE LA FIFA </h1>
+
+
+<script>
+
+    // Esta función permite hacer saltos de linea.
+    function saltarlinea(){
+
+        document.write("<br><br><br>");
+    }
+    
+    // Esta función permite mostrar el input del usuario con una palabra.
+    function print(frase){
+
+        document.write(frase)
+    }
+    
+    var anhoMundial = 1930; //Se declara el año donde comenzo el mundial
+
+    var limite = parseInt(prompt("Ingrese el año limite para calcular.")); //convierte a entero la respuesta del usuario
+    
+    //Loop que muestra los años que hubieron mundial hasta la fecha que mostro el usuario
+    while (anhoMundial <= limite) {
+        anhoMundial = anhoMundial + 4;
+    print("Hubo mundial de la FIFA en el año " + anhoMundial);
+    saltarlinea();
+    } 
+    
+    print("¡FIN!");
+
+
+
+</script>

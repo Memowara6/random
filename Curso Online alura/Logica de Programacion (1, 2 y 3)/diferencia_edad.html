@@ -1,0 +1,31 @@
+<meta charset="UTF-8">
+
+<h3>Diferencia de Edad</h3>
+
+<script>
+    
+    //Esta funcion nos permite hacer saltos de linea
+    function saltarLinea(){
+
+    	document.write("<br><br>")
+    }
+    
+    //esta funcion nos permite mostrar un mensaje en pantalla
+	function imprimir(mensaje){
+
+		document.write(mensaje);
+		saltarLinea();
+	}
+ 
+    //variables con las diferentes edades
+	var edadMia = 16;
+	var edadHermano = 10;
+    
+    //formula para conseguir la diferencia de edad
+	var diferencia = edadMia - edadHermano;
+    
+    //muestra en pantalla la diferencia de edad con un mensaje
+	imprimir("La diferencia de edad entre mi hermano y yo es de: " + diferencia);
+
+
+</script>

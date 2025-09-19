@@ -1,0 +1,39 @@
+<canvas width="600" height="400"> </canvas>
+
+
+<script>
+	//funcion para dibujar un cuadrado en nuestra canva
+	function dibujarCuadrado(color, ejeX, ejeY, base, altura) {
+
+		//declaracion del lienzo y la dimencion del pincel
+	    var pantalla = document.querySelector("canvas");
+	    var pincel = pantalla.getContext("2d");
+
+		pincel.fillStyle = color; // propiedad
+	    pincel.fillRect(ejeX,ejeY,base,altura); // función
+	    pincel.strokeStyle = "black";
+	    pincel.strokeRect(ejeX,ejeY,base,altura);
+
+	}
+	
+	/*
+	var x = 0
+	while (x <= 600 ) {
+		dibujarCuadrado("red", x, 0, 50, 50);
+		dibujarCuadrado("white", x, 50, 50, 50);
+		dibujarCuadrado("blue", x, 100, 50, 50);
+		x = x + 50;
+	}
+
+	*/
+
+	for (var x = 0; x <= 600; x + 50) {
+		dibujarCuadrado("black", x, 0, 50, 50);
+		dibujarCuadrado("gray", x, 50, 50, 50);
+		dibujarCuadrado("white", x, 100, 50, 50);
+		x = x + 50;
+	}
+    
+ 
+   
+</script>

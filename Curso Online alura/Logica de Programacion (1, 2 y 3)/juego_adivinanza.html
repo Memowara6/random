@@ -1,0 +1,57 @@
+<meta charset="UTF-8">
+
+<h1>PROGRAMA DE ADIVINANZA</h1>
+
+
+<script>
+
+    // Esta función permite hacer saltos de linea.
+    function saltarlinea(){
+
+        document.write("<br><br><br>");
+    }
+    
+    // Esta función permite mostrar el input del usuario con una palabra.
+    function print(frase){
+
+        document.write(frase)
+    }
+    
+    //funcion para sortear los numeros
+    function sortear(numeroLimite) {
+        numeroPensado = Math.round(Math.random() * numeroLimite);
+        return (numeroPensado);
+    }
+
+    var limite = prompt("Ingrese un numero: ");
+    var numeroPensado = sortear(limite);
+
+    //variables contadoras
+    var intentos = 3;
+    var contador = 1;
+    
+    //loop para limitar el numeros de intentos del usuario
+    while (contador <= intentos) {
+
+        var numeroLanzado = parseInt(prompt("Ingrese un numero entre 0 y " + limite));
+
+        if (numeroLanzado == numeroPensado) {
+            alert("¡Usted a acertado! En el intento: " + contador);
+            break;
+        }
+
+        else {
+            alert("Usted erró");
+
+            if (numeroLanzado > limite || numeroLanzado < 0) {
+                alert("¡El numero a encontrar se encuentra entre el 0 y el " + limite);
+            }
+        }
+        contador++;
+    }
+    
+
+    
+
+
+</script>
